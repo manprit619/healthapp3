@@ -1,3 +1,21 @@
+
+**Deployed version: https://manprit619healthapp.vercel.app/Login
+
+This is for testing purpose only.
+
+Create your own credentils by clicking on create new.
+
+Do try with the given details for tesing purpose:
+Email: lara@gmail.com
+Password: 1234546
+
+Email: oliver@gmail.com
+Password: 1234546
+
+Email: manpreet@gmail.com
+Password: 1234546**
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
