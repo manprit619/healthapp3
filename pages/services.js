@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from './Layout'
 
 const services = () => {
+
+  const [value, setValue] = useState(0);
+  const [value1, setValue1] = useState(0);
+  const [value2, setValue2] = useState(0);
+  const [value3, setValue3] = useState(0);
+  const [value4, setValue4] = useState(0);
+  const [value5, setValue5] = useState(0);
+  const [value6, setValue6] = useState(0);
+
+
   return (
     <Layout>
-  <strong className="">Dermatologic Assessment</strong>
+  <strong className="">Questionnaire</strong>
   <br/>
     <br/>
 
@@ -12,40 +22,100 @@ const services = () => {
     <br/>
 
 <div className=" ">
-<h1>Etching</h1>
+<h1>Pain</h1>
 
-  <input className="w-full h-4 rounded bg-gray-400" type="range"  />
+<input className="w-full h-4 rounded bg-gray-400"
+      type="range"
+      min="0"
+      max="100"
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+      step="1"
+      width="100%"
+    />
+    {value}
+    
+  <h1>Itching</h1>
 
-  <h1>Drk skin</h1>
+  <input className="w-full h-4 rounded bg-gray-400"
+      type="range"
+      min="0"
+      max="100"
+      value={value1}
+      onChange={(e) => setValue1(e.target.value)}
+      step="1"
+      width="100%"
+    />
+    {value1}
 
-  <input className="w-full h-4 rounded bg-gray-400" type="range"   />
+  <h1>Activity</h1>
 
-  <h1>Thickened skin</h1>
+  <input className="w-full h-4 rounded bg-gray-400"
+      type="range"
+      min="0"
+      max="100"
+      value={value2}
+      onChange={(e) => setValue2(e.target.value)}
+      step="1"
+      width="100%"
+    />
+    {value2}
 
-  <input className="w-full h-4 rounded bg-gray-400" type="range"  />
+  <h1>Joint pain</h1>
 
-  <h1>Bleeding where the involved skin is scratched</h1>
+  <input className="w-full h-4 rounded bg-gray-400"
+      type="range"
+      min="0"
+      max="100"
+      value={value3}
+      onChange={(e) => setValue3(e.target.value)}
+      step="1"
+      width="100%"
+    />
+    {value3}
 
-  <input className="w-full h-4 rounded bg-gray-400" type="range"   />
+  <h1>Side effects</h1>
 
-  <h1>Stress level</h1>
+  <input className="w-full h-4 rounded bg-gray-400"
+      type="range"
+      min="0"
+      max="100"
+      value={value4}
+      onChange={(e) => setValue4(e.target.value)}
+      step="1"
+      width="100%"
+    />
+    {value4}
 
-  <input className="w-full h-4 rounded bg-gray-400" type="range"   />
+  <h1>Adherence to therapy
+</h1>
 
-  <h1>Reaction</h1>
-
-  <input className="w-full h-4 rounded bg-gray-400" type="range"   />
+<input className="w-full h-4 rounded bg-gray-400"
+      type="range"
+      min="0"
+      max="100"
+      value={value5}
+      onChange={(e) => setValue5(e.target.value)}
+      step="1"
+      width="100%"
+    />
+    {value5}
 
   <h1>Hair loss</h1>
 
-  <input className="w-full h-4 rounded bg-gray-400" type="range"   />
+  <input className="w-full h-4 rounded bg-gray-400"
+      type="range"
+      min="0"
+      max="100"
+      value={value6}
+      onChange={(e) => setValue6(e.target.value)}
+      step="1"
+      width="100%"
+    />
+    {value6}
+  
 
-  <h1>Etching</h1>
-
-  <input className="w-full h-4 rounded bg-gray-400" type="range"   />
-
-  {/* <h1>Etching</h1>
-  <input className="w-full h-4 rounded bg-gray-400" type="range" min="1" max="100" value="50" class="slider"  /> */}
+ 
 
 </div>
 <br/>
@@ -58,3 +128,4 @@ const services = () => {
   )
 }
 
+export default services
