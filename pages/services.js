@@ -1,7 +1,16 @@
 import React, { useState } from 'react'
 import Layout from './Layout'
+import { useRouter } from 'next/router'
+
 
 const services = () => {
+
+  const sendToCameraPage = () => {
+    router.push("/camera")
+   }
+ 
+   const router = useRouter();
+
 
   const [value, setValue] = useState(0);
   const [value1, setValue1] = useState(0);
@@ -120,8 +129,8 @@ const services = () => {
 </div>
 <br/>
 <div>
-<button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-  Next
+<button onClick={sendToCameraPage} class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+  Next 
 </button>
 </div>
     </Layout>
