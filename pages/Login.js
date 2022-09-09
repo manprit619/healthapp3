@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import { useState } from "react"
-import { useRouter } from "next/dist/client/router"
+//import { useRouter } from "next/dist/client/router"
 import auth from "../firebase"
+import { useRouter } from 'next/router'
+
 
 export default function  Login () {
 
@@ -11,7 +13,7 @@ export default function  Login () {
     const login = (e) => {
         e.preventDefault()
         auth.signInWithEmailAndPassword(email, password).then(()=> {
-            router.push("/")
+            router.push("/home")
 
         }).catch((e) => alert(e))
     }

@@ -18,7 +18,7 @@ const camera = () => {
 
   const router = useRouter();
 
-const sendTobackCameraPage = () => {st
+const sendTobackCameraPage = () => {
   router.push("/backCamera")
  }
   const webcamRef = useRef(null);
@@ -44,7 +44,8 @@ const sendTobackCameraPage = () => {st
 
   return (
     <Layout >
-      <strong>Front picture</strong>
+      <strong>Full body photo
+</strong>
 
 <Webcam
         ref={webcamRef}

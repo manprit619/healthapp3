@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import picture from '../public/picture.webp'
+import picture from '../public/picture.png'
 import Layout from './Layout'
 
 
@@ -9,11 +9,11 @@ function home() {
     <Layout>
     <div><h1>Welcome to my app</h1>
 <br/>
-    <Image 
+   <Image 
     src={picture}
     alt="Picture of the author"
     
-    />
+    /> 
     <br/>
     <strong>Features include:</strong>
     <p>

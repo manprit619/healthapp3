@@ -1,13 +1,15 @@
 
 
 import Layout from "./Layout";
+import Login from "./Login";
+
 
 export default function Home() {
 
 
 
   return (
-    <Layout/>
+    <Login/>
     ) }
   
 // <div>

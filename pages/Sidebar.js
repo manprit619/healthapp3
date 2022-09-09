@@ -17,7 +17,7 @@ import { useAuthState} from "react-firebase-hooks/auth"
 
 
 const menuItems = [
-    { id: 1, label: "Home", icon: HomeIcon, link: "/Layout" },
+    { id: 1, label: "Home", icon: HomeIcon, link: "/home" },
     { id: 2, label: "Disease", icon: ArticleIcon, link: "/disease" },
     { id: 3, label: "Services", icon: UsersIcon, link: "/services" },
     { id: 4, label: "Camera", icon: CameraIcon, link: "/camera" },
