@@ -5,14 +5,15 @@ const defaultTheme = require('tailwindcss/defaultConfig');
 
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-    darkMode: false, 
+    darkMode: true, 
     important: true,
     // or 'media' or 'class'
   theme: {
    ...defaultTheme,
     colors: {
       ...defaultTheme.colors,
-      primary: "#7dd3fc",
+      primary: "#757575",
+      //primary: "#334155",
       white: '#ffffff',
       text: {
        DEFAULT: "#1F2937",

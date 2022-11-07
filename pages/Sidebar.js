@@ -9,8 +9,11 @@ import CameraIcon from './icons/CameraIcon'
 import LogoutIcon from './icons/LogoutIcon'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
- import { MdLocalHospital } from 'react-icons/md';
+import Image from 'next/image'
+import logo from '../pages/icons/logo.jpg'
 
+
+//import { MdLocalHospital } from 'react-icons/md';
 
 import auth from "../firebase"
 import { useAuthState} from "react-firebase-hooks/auth"
@@ -20,7 +23,7 @@ const menuItems = [
     { id: 1, label: "Home", icon: HomeIcon, link: "/home" },
     { id: 2, label: "Disease", icon: ArticleIcon, link: "/disease" },
     { id: 3, label: "Services", icon: UsersIcon, link: "/services" },
-    { id: 4, label: "Camera", icon: CameraIcon, link: "/camera" },
+    { id: 4, label: "Camera", icon: CameraIcon, link: "/cloud" },
   ];
 
 const Sidebar = () => {
@@ -34,12 +37,13 @@ const Sidebar = () => {
    router.push("/Login")
   }
 
+  const router = useRouter();
 
     const [toggleCollapse, setToggleCollapse] = useState(true)
 
     const [isCollapsible, setIsCollapsible] = useState(false);
 
-    const router = useRouter();
+   
 
     const activeMenu = useMemo(
       () => menuItems.find((menu) => menu.link === router.pathname),
@@ -93,13 +97,15 @@ const Sidebar = () => {
    <div className="flex items-center justify-between relative">
 
    <div className="flex items-center pl-1 gap-4">
-   <LogoIcon />
+   {/* <LogoIcon /> */}
     <span
               className={classNames("mt-2 text-lg font-medium text-text", {
                 hidden: toggleCollapse,
               })}
             >
-              HealthApp Logo   
+              {/* HealthApp Logo    */}
+              {/* <img src="./icons/logo.jpg"/> */}
+              <Image src={logo} height={100} width={150}/>
 
             </span>
 
@@ -120,7 +126,7 @@ return (
 <div className={classes}>
 
 {/* {menu.label} */}
-<Link href={menu.link}>
+<Link legacyBehavior href={menu.link}>
 <a className="flex py-4 px-3 items-center w-full h-full">
 <div style={{width: "2.5rem"}}>
 <Icon />
@@ -157,10 +163,12 @@ return (
 
 
    <div style={{width: "2.5rem"}}>  {userName}
+  <p onClick={() => router.push('/Login')} >logout here</p>  
+  <LogoutIcon />
 
-<LogoutIcon onClick={sendToLoginPage} />
-
-</div>
+ 
+   </div>
+  
 {!toggleCollapse && (
                       <span
                         className={classNames(

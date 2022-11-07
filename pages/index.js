@@ -1,50 +1,46 @@
 
 
-import Layout from "./Layout";
 import Login from "./Login";
+// import {sigIn, signOut, useSession} from "next-auth/react"
+
 
 
 export default function Home() {
+// const {data: session } = useSession()
 
 
 
   return (
-    <Login/>
-    ) }
   
-// <div>
 
-//  {loading ? (
-//   <h1> Loading</h1>
-//  ) : (
-//   <div> 
+  <Login/>
+  ) }
 
-// { user ? (
+   {/* {session ? (
+<>
+<button onClick={signOut}>Sign out</button>
+</>
 
-//   <div> 
-//      Hello, {userName}
-//      <br />
-//     <button  onClick={() => auth.signOut()}  className="cursor-pointer p-3 shadow-lg rounded-md w-24 transition duration-200 hover:shadow-md ml-auto" >
-//   Sign Out
-//   </button> 
-//   </div>
+   ): (
+<>
+<button onCLick={signIn}>Sign In</button>
+</>
 
 
-// ) : (
-// <div> 
-//   Login ↓ <br />
-// <button  onClick={sendToLoginPage}className="cursor-pointer p-3 shadow-lg rounded-md w-24 transition duration-200 hover:shadow-md ml-auto" >
-// Sign In
-// </button>
+   )}
+
+  </div> */}
+
+
+   
+
+   
+   
   
-// </div>
 
-// )}
-//   </div>
-//  )} 
 
-// <br />
-// </div>  
+
+ 
  
 
 
