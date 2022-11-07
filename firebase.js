@@ -1,7 +1,10 @@
 //import firebase from "firebase"
-import firebase from 'firebase/compat/app';
+ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
+import {getFirestore} from 'firebase/firestore';
 
+
+  
 
 const firebaseConfig = {
     apiKey: "AIzaSyAqWN1I96Medc2BSMUnvc-nAVyO5FRQsWE",
@@ -9,7 +12,9 @@ const firebaseConfig = {
     projectId: "health-app-209f0",
     storageBucket: "health-app-209f0.appspot.com",
     messagingSenderId: "414328237050",
-    appId: "1:414328237050:web:c51905e20867a304a11243"
+    appId: "1:414328237050:web:c51905e20867a304a11243",
+    // databaseURL: 'https://health-app-209f0.firebaseio.com',
+
   };
 
 
@@ -20,6 +25,9 @@ const firebaseConfig = {
     app = firebase.app();
   }
 
-  const auth = firebase.auth();
+ const auth = firebase.auth();
+ const db = getFirestore(app)
 
-  export default auth;
+export {db};
+  
+export default auth;

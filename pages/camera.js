@@ -2,6 +2,7 @@ import React, {useRef, useEffect, useState} from 'react'
 import Layout from "./Layout"
 import Webcam from "react-webcam";
 import { useRouter } from 'next/router'
+import Summary from "./summary.js"
 
 
 const videoConstraints = {
@@ -10,14 +11,8 @@ const videoConstraints = {
   facingMode: "environment",
 };
 
-
-
 const camera = () => {
-
-
-
-  const router = useRouter();
-
+const router = useRouter();
 const sendTobackCameraPage = () => {
   router.push("/backCamera")
  }
@@ -35,16 +30,10 @@ const sendTobackCameraPage = () => {
   
 
 
-
-
- 
-
-
-
-
   return (
     <Layout >
       <strong>Full body photo
+
 </strong>
 
 <Webcam
@@ -68,9 +57,16 @@ const sendTobackCameraPage = () => {
      
       {url && (
         <div>
-          <img src={url} alt="Screenshot" />
+          <img src={url} alt="Screenshot" 
+          
+          />
+                
+
         </div>
+
+
       )}
+
      
 
 

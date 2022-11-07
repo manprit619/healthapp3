@@ -1,13 +1,19 @@
 import Head from 'next/head'
 import { useState } from "react"
-//import { useRouter } from "next/dist/client/router"
 import auth from "../firebase"
 import { useRouter } from 'next/router'
-
+import Image from 'next/image'
+import logo from '../pages/icons/logo.jpg'
+import { useAuthState} from "react-firebase-hooks/auth"
 
 export default function  Login () {
 
     const [ email, setEmail] = useState("")
+    const [user, loading] = useAuthState(auth)
+    const userName = user?.email
+
+    console.log(userName,"email")
+
     const [ password, setPassword] = useState("")
     const router = useRouter()
     const login = (e) => {
@@ -27,7 +33,7 @@ export default function  Login () {
         transform: "translateX(-50%) translateY(-50%)",
         width: 420,
     }}>
-
+ <Image   src={logo} height={250} width={410}/>
     <Head>
         <title>Login</title>
     </Head>
