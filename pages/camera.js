@@ -25,7 +25,7 @@ const sendTobackCameraPage = () => {
   }, [webcamRef]);
  
   const onUserMedia = (e) => {
-    console.log(e);
+    console.log(e,"data");
   };
   
 

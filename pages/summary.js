@@ -62,8 +62,8 @@ read()
                     <Image width={200} height={200} src={image.image} alt="" />
                   </div>
                   <h3 >
+             <p className="text-[#48b520]">Timestamp {image.created_at}</p>
           
-                    {/* { image.title } */}
                   </h3>
                 </a>
               </li>
@@ -78,13 +78,7 @@ read()
         
  
       <div class="box-border  p-1 border-4" >
-      {/* <h3>activity = 10</h3>
-<h3>hairloss = 20</h3>
-<h3>itching = 12</h3>
-<h3>jointpain = 30</h3>
-<h3>pain = 34</h3>
-<h3>sideeffects = 50</h3>
-<h3>therapy = 80</h3> */}
+     
 
 { questionnaire.map((questionnaire) => {
   return (
@@ -160,6 +154,7 @@ export async function getStaticProps() {
       image: resource.secure_url,
       width,
       height,
+      created_at: resource.created_at,
     }
   })
     return {
