@@ -7,11 +7,25 @@ import {
   collection,addDoc,query,getDocs
 } from "firebase/firestore";
 import { db} from "../firebase";
+import auth from "../firebase"
+import { useAuthState} from "react-firebase-hooks/auth"
+
+
 
 const services = () => {
 
+  const [curr, setCurr] = useState("");
   
+  const [user, loading] = useAuthState(auth)
+  const userName = user?.email
+  const userEmail = user?.displayName
 
+// Function to get time and date
+const getDate = () => {
+  const a = firebase.firestore
+      .Timestamp.now().toDate().toString();
+  setCurr(a);
+}
 
  
 const sendData = async () => {
@@ -23,6 +37,8 @@ jointpain: jointpain,
 sideeffects: sideeffects,
 therapy: therapy,
 hairloss: hairloss,
+patientname: userName,
+patientemailid: userEmail,
 
 }).then(() => {
   read();
@@ -199,12 +215,14 @@ hairloss: hairloss,
 
 </div>
 
+<div> <center><h1>{curr}</h1></center></div>
+
 <div>
 <button onClick={sendToCameraPage} class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
   Next 
 </button>
 <button onClick={sendData}  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Send</button>
-
+<button  onClick={getDate} class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Show date</button>
 
 </div>
 
