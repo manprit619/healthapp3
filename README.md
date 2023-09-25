@@ -1,5 +1,5 @@
 
-**Deployed version: https://manprit619healthapp.vercel.app/Login
+**Deployed version: https://manprit619healthapp.vercel.app/Login This is working locally, on vercel its broken.
 
 This is for testing purpose only.
 
